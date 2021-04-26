@@ -23,7 +23,7 @@ namespace LocadoraDeVeiculos
 
             CarRental carRental = new(start, finish, new Vehicle(model));
 
-            RentalService rentalService = new RentalService(princePerHour, princePerDay);
+            RentalService rentalService = new RentalService(princePerHour, princePerDay, new BrazilTaxService());
 
             rentalService.ProcessInvoice(carRental);
 
